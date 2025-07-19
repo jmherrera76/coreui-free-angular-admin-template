@@ -2,6 +2,8 @@ import { DOCUMENT, NgStyle } from '@angular/common';
 import { Component, DestroyRef, effect, inject, OnInit, Renderer2, signal, WritableSignal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ChartOptions } from 'chart.js';
+import { brandSet, flagSet, freeSet } from '@coreui/icons';
+import {  IconSetService } from '@coreui/icons-angular';
 import {
   AvatarComponent,
   ButtonDirective,
@@ -25,6 +27,8 @@ import { IconDirective } from '@coreui/icons-angular';
 import { WidgetsBrandComponent } from '../widgets/widgets-brand/widgets-brand.component';
 import { WidgetsDropdownComponent } from '../widgets/widgets-dropdown/widgets-dropdown.component';
 import { DashboardChartsData, IChartProps } from './dashboard-charts-data';
+import { ActivatedRoute } from '@angular/router';
+import { FoamTreeVisualizationLightComponent } from '../../foam-tree-visualization-light/foam-tree-visualization-light.component'
 
 interface IUser {
   name: string;
@@ -43,8 +47,9 @@ interface IUser {
 @Component({
   templateUrl: 'dashboard.component.html',
   styleUrls: ['dashboard.component.scss'],
+  providers: [IconSetService],
   standalone: true,
-  imports: [WidgetsDropdownComponent, TextColorDirective, CardComponent, CardBodyComponent, RowComponent, ColComponent, ButtonDirective, IconDirective, ReactiveFormsModule, ButtonGroupComponent, FormCheckLabelDirective, ChartjsComponent, NgStyle, CardFooterComponent, GutterDirective, ProgressBarDirective, ProgressComponent, WidgetsBrandComponent, CardHeaderComponent, TableDirective, AvatarComponent]
+  imports: [ FoamTreeVisualizationLightComponent, WidgetsDropdownComponent, TextColorDirective, CardComponent, CardBodyComponent, RowComponent, ColComponent, ButtonDirective, IconDirective, ReactiveFormsModule, ButtonGroupComponent, FormCheckLabelDirective, ChartjsComponent, NgStyle, CardFooterComponent, GutterDirective, ProgressBarDirective, ProgressComponent, WidgetsBrandComponent, CardHeaderComponent, TableDirective, AvatarComponent]
 })
 export class DashboardComponent implements OnInit {
 
@@ -146,6 +151,11 @@ export class DashboardComponent implements OnInit {
     trafficRadio: new FormControl('Month')
   });
 
+  constructor(
+    private route: ActivatedRoute, public iconSet: IconSetService
+  ) {
+    iconSet.icons = { ...freeSet, ...brandSet, ...flagSet };
+  }
   ngOnInit(): void {
     this.initCharts();
     this.updateChartOnColorModeChange();

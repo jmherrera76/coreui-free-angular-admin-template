@@ -1,15 +1,107 @@
 import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
+  
   {
     name: 'Dashboard',
     url: '/dashboard',
-    iconComponent: { name: 'cil-speedometer' },
+    iconComponent: { name: 'cil-speedometer' }
+  },
+  {
+    name: 'Buscador noticias',
+    url: '/search',
+    iconComponent: { name: 'cil-newspaper' }
+  },
+  {
+    name: 'Alertas',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-warning' },
+    badge: {
+      color: 'danger',
+      text: '3'
+    }
+  },
+
+  {
+    name: 'Informes',
+    url: '/base',
+    iconComponent: { name: 'cil-chart-line' },
+    children: [
+      {
+        name: 'Accordion',
+        url: '/base/accordion',
+        icon: 'nav-icon-bullet'
+      },
+    ]
+  },
+
+  {
+    name: 'API',
+    title: true
+  },
+
+  {
+    name: 'Legacy',
+    url: '/search',
+    iconComponent: { name: 'cil-cloud' },
     badge: {
       color: 'info',
       text: 'NEW'
     }
   },
+
+  {
+    name: 'SOLR',
+    url: '/search',
+    iconComponent: { name: 'cil-cloud' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    }
+  },
+  {
+    name: 'MySQL',
+    url: '/search',
+    iconComponent: { name: 'cil-cloud' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    }
+  },
+  {
+    name: 'Admin',
+    title: true
+  },
+
+  {
+    name: 'Usuarios',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-user' },
+  },
+  {
+    name: 'Fuentes RSS',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-rss' },
+  },
+  {
+    name: 'Noticias',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-speedometer' }
+  },
+
+{
+    name: 'Datos auxiliares',
+    url: '/base',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'Prediccion impacto',
+        url: '/base/accordion',
+        icon: 'nav-icon-bullet'
+      },
+    ]
+  },
+
   {
     title: true,
     name: 'Theme'

@@ -15,6 +15,10 @@ export const routes: Routes = [
     },
     children: [
       {
+        path: 'search',
+        loadChildren: () => import('./views/search_news/routes').then((m) => m.routes)
+      },
+      {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
       },

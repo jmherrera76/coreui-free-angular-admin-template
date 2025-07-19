@@ -1,10 +1,45 @@
+<c-row>
+  <c-col md="8">
+    <c-card class="my-4">
+      <app-foam-tree-visualization-light></app-foam-tree-visualization-light> 
+    </c-card>
+    
+  </c-col>
+  <c-col>
+    <c-card class="my-4">
+      <c-card-header>
+        <h4 class="card-title mb-0" id="traffic">Buscador rapido</h4>
+      </c-card-header>
+      <c-card-body>
+        <ul cListGroup>
+          <li cListGroupItem>Cras justo odio</li>
+          <li cListGroupItem>Dapibus ac facilisis in</li>
+          <li cListGroupItem>Vestibulum at eros</li>
+        </ul>
+      </c-card-body>
+    </c-card>    
+    <c-card class="my-4">
+      <c-card-header>
+        <h4 class="card-title mb-0" id="traffic">Indicadores Power BI</h4>
+      </c-card-header>
+      <c-card-body>
+        <ul cListGroup>
+          <li cListGroupItem>Cras justo odio</li>
+          <li cListGroupItem>Dapibus ac facilisis in</li>
+          <li cListGroupItem>Vestibulum at eros</li>
+        </ul>
+      </c-card-body>
+    </c-card>    
+  </c-col>
+
+</c-row>
 <app-widgets-dropdown />
 <c-card class="my-4">
   <c-card-body>
     <c-row>
       <c-col sm="5">
-        <h4 class="card-title mb-0" id="traffic">Traffic</h4>
-        <div class="small text-body-secondary">January - December 2023</div>
+        <h4 class="card-title mb-0" id="traffic">Impacto</h4>
+        <div class="small text-body-secondary">January - December 2024</div>
       </c-col>
       <c-col class="d-none d-md-block" sm="7">
         <button cButton class="float-end" color="primary" aria-label="Download">
@@ -81,29 +116,29 @@
   <c-card-footer>
     <c-row class="text-center mb-2" [xl]="5" [lg]="4" [sm]="2" [xs]="1" [gutter]="4">
       <c-col>
-        <div class="text-body-secondary">Visits</div>
-        <strong>29.703 Users (40%)</strong>
-        <c-progress class="mt-2" thin color="success" value="40" aria-label="User visits" />
+        <div class="text-body-secondary">Molt Alt</div>
+        <strong>29.703 news (40%)</strong>
+        <c-progress class="mt-2" thin color="black" value="40" aria-label="User visits" />
       </c-col>
       <c-col>
-        <div class="text-body-secondary">Unique</div>
+        <div class="text-body-secondary">Alt</div>
         <div class="fw-semibold text-truncate">24.093 Users (20%)</div>
-        <c-progress class="mt-2" thin color="info" value="20" aria-label="Unique users" />
+        <c-progress class="mt-2" thin color="danger" value="20" aria-label="Unique users" />
       </c-col>
       <c-col>
-        <div class="text-body-secondary">Page views</div>
+        <div class="text-body-secondary">Mitjá</div>
         <div class="fw-semibold text-truncate">78.706 Views (60%)</div>
         <c-progress class="mt-2" thin color="warning" value="60" aria-label="Page views" />
       </c-col>
       <c-col>
-        <div class="text-body-secondary">New Users</div>
+        <div class="text-body-secondary">Baix</div>
         <div class="fw-semibold text-truncate">22.123 Users (80%)</div>
-        <c-progress class="mt-2" thin color="danger" value="80" aria-label="New users" />
+        <c-progress class="mt-2" thin  value="80" aria-label="New users" />
       </c-col>
       <c-col class="d-none d-xl-block">
-        <div class="text-body-secondary">Bounce Rate</div>
+        <div class="text-body-secondary">Molt Baix</div>
         <div class="fw-semibold text-truncate">Average Rate (40.15%)</div>
-        <c-progress class="mt-2" thin value="40" aria-label="Bounce rate" />
+        <c-progress class="mt-2" thin value="40" aria-label="Bounce rate" color="success"/>
       </c-col>
     </c-row>
   </c-card-footer>

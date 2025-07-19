@@ -69,9 +69,9 @@ export class WidgetsBrandComponent implements AfterContentInit {
   };
   brandData: BrandData[] = [
     {
-      icon: 'cibFacebook',
-      values: [{ title: 'friends', value: '89K' }, { title: 'feeds', value: '459' }],
-      capBg: { '--cui-card-cap-bg': '#3b5998' },
+      icon: 'cil-rss',
+      values: [{ title: 'Fuentes RSS', value: '350' }, { title: 'feeds', value: '25.000.000' }],
+      capBg: { '--cui-card-cap-bg': '#FFA500' },
       labels: [...this.labels],
       data: {
         labels: [...this.labels],
@@ -80,29 +80,20 @@ export class WidgetsBrandComponent implements AfterContentInit {
     },
     {
       icon: 'cibTwitter',
-      values: [{ title: 'followers', value: '973k' }, { title: 'tweets', value: '1.792' }],
-      capBg: { '--cui-card-cap-bg': '#00aced' },
+      values: [{ title: 'hashtags', value: '850' }, { title: 'tweets', value: '1.792' }],
+      capBg: { '--cui-card-cap-bg': '#000000' },
       data: {
         labels: [...this.labels],
         datasets: [{ ...this.datasets, data: [1, 13, 9, 17, 34, 41, 38], label: 'Twitter', ...this.colors }]
       }
     },
     {
-      icon: 'cib-linkedin',
-      values: [{ title: 'contacts', value: '500' }, { title: 'feeds', value: '1.292' }],
-      capBg: { '--cui-card-cap-bg': '#4875b4' },
+      icon: 'cib-telegram',
+      values: [{ title: 'groups', value: '500' }, { title: 'feeds', value: '1.292' }],
+      capBg: { '--cui-card-cap-bg': '#0088cc' },
       data: {
         labels: [...this.labels],
         datasets: [{ ...this.datasets, data: [78, 81, 80, 45, 34, 12, 40], label: 'LinkedIn', ...this.colors }]
-      }
-    },
-    {
-      icon: 'cilCalendar',
-      values: [{ title: 'events', value: '12+' }, { title: 'meetings', value: '4' }],
-      color: 'warning',
-      data: {
-        labels: [...this.labels],
-        datasets: [{ ...this.datasets, data: [35, 23, 56, 22, 97, 23, 64], label: 'Events', ...this.colors }]
       }
     }
   ];

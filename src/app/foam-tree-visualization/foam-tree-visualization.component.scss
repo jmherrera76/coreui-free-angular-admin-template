@@ -1,0 +1,28 @@
+/** Emulation of FoamTree 2.0.x line demo layout */
+body {
+    background-color: #1d1c1b;
+    color: white;
+  }
+  #container {
+    //background: url(assets/images/checker.png) #252423;
+  }
+  #visualization {
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+  #inner {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+  }
+  code {
+    background-color: #333;
+    border-color: #444;
+    color: #b3d8ff;
+  }
+  
